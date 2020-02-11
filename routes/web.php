@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('factory_method');
 });
+
+    Route::get('/factory', function () {
+        return view('abstract_fctory');
+    });
