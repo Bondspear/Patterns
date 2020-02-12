@@ -5,15 +5,11 @@ namespace App\Abstract_factory;
 
 class Provider implements AbstractMagazine
 {
-    public function createCounterFood(): CounterFood
+    public function createManufacturer(): Manufacturer
     {
         return new SomeFood;
     }
-       
-    public function createCounterDrink(): CounterDrink
-    {
-        return new SomeDrink;
-    }
+
 }
 
 

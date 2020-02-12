@@ -18,3 +18,8 @@ Route::get('/', function () {
     Route::get('/factory', function () {
         return view('abstract_fctory');
     });
+
+    
+        Route::get('/adapter', function () {
+            return view('adapter');
+        });

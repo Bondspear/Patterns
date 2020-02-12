@@ -4,11 +4,9 @@ namespace App\Abstract_factory;
 # это наш магазин абстрактно
 interface AbstractMagazine
 {
-    # это наши прилавки
-    public function createCounterFood(): CounterFood; 
+    # это наш производитель
+    public function createManufacturer(): Manufacturer; 
 
-       # это наши прилавки
-    public function createCounterDrink(): CounterDrink;
 }
 
 

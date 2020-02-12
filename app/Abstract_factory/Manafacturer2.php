@@ -6,8 +6,3 @@ interface Manufacturer2
 {
     public function description();
 }
-
-
-
-
-

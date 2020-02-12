@@ -2,7 +2,7 @@
 
 namespace App\Abstract_factory;
 # это наши производители абстрактно
-interface Manufacturer2
+interface Manufacturer
 {
     public function description();
 }

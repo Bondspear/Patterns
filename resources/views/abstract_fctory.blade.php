@@ -13,13 +13,11 @@ $y =  new Provider2;
 ?>
 
 <ul>
-  <li> {{$x->createCounterFood()->description()}} </li>
-  <li> {{$x->createCounterDrink()->description()}} </li>
+  <li> {{$x->createManufacturer()->description()}} </li>
 </ul>
 <hr>
 <ul>
-  <li> {{$y->createCounterFood()->description()}} </li>
-  <li> {{$y->createCounterDrink()->description()}} </li>
+  <li> {{$y->createManufacturer()->description()}} </li>
 </ul>
 
 
