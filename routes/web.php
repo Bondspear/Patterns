@@ -23,3 +23,24 @@ Route::get('/', function () {
         Route::get('/adapter', function () {
             return view('adapter');
         });
+        
+        
+            Route::get('/bridge', function () {
+                return view('bridge');
+            });
+           
+            Route::get('/builder', function () {
+                return view('builder');
+            });
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
