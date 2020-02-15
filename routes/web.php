@@ -32,6 +32,10 @@ Route::get('/', function () {
             Route::get('/builder', function () {
                 return view('builder');
             });
+
+            Route::get('/singelton', function () {
+                return view('singelton');
+            });
             
             
             
