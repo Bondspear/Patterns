@@ -36,6 +36,9 @@ Route::get('/', function () {
             Route::get('/singelton', function () {
                 return view('singelton');
             });
+            Route::get('/prototype', function () {
+                return view('prototype');
+            });
             
             
             

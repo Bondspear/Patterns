@@ -7,7 +7,7 @@ class TextBuilder implements Builder
     public $product;
     
     
-    public function reset(): void
+    public function reset()
     {
         $this->product = new Product1;
         
