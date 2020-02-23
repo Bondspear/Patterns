@@ -40,6 +40,10 @@ Route::get('/', function () {
                 return view('prototype');
             });
             
+            Route::get('/fasade', function () {
+                return view('fasade');
+            });
+            
             
             
             
