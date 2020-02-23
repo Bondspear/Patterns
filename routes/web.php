@@ -47,6 +47,10 @@ Route::get('/', function () {
                 return view('proxy');
             });
             
+            Route::get('/decorator', function () {
+                return view('decorator');
+            });
+            
             
             
             
