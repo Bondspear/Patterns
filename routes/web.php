@@ -43,6 +43,9 @@ Route::get('/', function () {
             Route::get('/fasade', function () {
                 return view('fasade');
             });
+            Route::get('/proxy', function () {
+                return view('proxy');
+            });
             
             
             
