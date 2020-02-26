@@ -1,23 +1,26 @@
 <?php
 
 namespace App\ChainResponsability;
-#это абстрактный класс "абстрактный оброботчик" он
-# реализует контракт "обработчик" и поэтому он
-# является типом "оброботчик" и его подклассы тоже
+
 abstract class AbstractHandler implements Handler
 {
-    #переменная $nextHandler теперь это любой подкласс (оброботчика)
+
     private $nextHandler;
    
-    
+    # я знаю, что в меня нужно ложить собственный класс
+    # и я верну экземпляр этого класса
     public function setNext(Handler $handler):Handler
     {
-        #когда запускается метод ,то  
+     
         $this->nextHandler = $handler;
         return $handler;
     }
     
-    
+    # я знаю, что в меня нужно ложить дату
+    # и если есть в наличии обработчик
+    # то я верну  метод  "handle" этого обработчика
+    # и положу в этот метод дату
+    # если нет в наличии оброботчика,то верну null
     public function handle($request)
     {
         if($this->nextHandler)
