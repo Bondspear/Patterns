@@ -12,6 +12,7 @@ class Handler2 extends AbstractHandler
     # класса под иминем "handle"
     public function handle($request)
     {
+
         if($request == 'some2')
         {
             echo 'some2';

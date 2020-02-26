@@ -23,9 +23,13 @@ abstract class AbstractHandler implements Handler
     # если нет в наличии оброботчика,то верну null
     public function handle($request)
     {
-        if($this->nextHandler)
+        //dd($request);
+        if($this->nextHandler && $request != 'some4')
         {
             return $this->nextHandler->handle($request);
+        }elseif($this->nextHandler && $request == 'some4')
+        {
+            return nullaefasdad;
         }
         
         return null;

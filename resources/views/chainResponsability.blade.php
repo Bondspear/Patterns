@@ -13,15 +13,12 @@ use App\ChainResponsability\Handler3;
 # и если я не нахожу, елемент - я пишу другое сообщение
 function client(Handler $handler)
 {
-    foreach(['some1','some2','some'] as $item)
+    foreach(['some1','some2','some4'] as $item)
     {
         $result = $handler->handle($item);
-        if($result)
+        if($result )
         {
             echo $result  . "\n";
-        }else
-        {
-            echo 'false'  . "\n";
         }
     }
 
@@ -42,10 +39,20 @@ $h3 = new Handler3;
 #
 # мы погружаемся в метод внутри которого класс,внутри которого метод и т д
 # в данном примере 3 оброботчика, а значит 3 погружения
-$h1->setNext($h1)->setNext($h2)->setNext($h3);
 
 
 
-print_r(client($h1) );
+
 
 ?>
+<pre>
+{{get_class($h1 )}}
+{{client($h1) }}
+{{get_class($h2 )}}
+{{client($h2) }}
+{{get_class($h3 )}}
+{{client($h3) }}
+</pre>
+
+
+

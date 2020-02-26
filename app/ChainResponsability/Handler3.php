@@ -12,10 +12,11 @@ class Handler3 extends AbstractHandler
     # класса под иминем "handle"
     public function handle($request)
     {
-        if($request == 'some3')
+        if($request == 'some3' )
         {
             echo 'some3';
-        }else
+        }
+        else
         {
             return parent::handle($request);
         }

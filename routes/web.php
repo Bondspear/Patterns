@@ -54,6 +54,9 @@ Route::get('/', function () {
             Route::get('/chainResponsability', function () {
                 return view('chainResponsability');
             });
+            Route::get('/picture', function () {
+                return view('picture');
+            });
             
             
             
