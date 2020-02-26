@@ -51,6 +51,10 @@ Route::get('/', function () {
                 return view('decorator');
             });
             
+            Route::get('/chainResponsability', function () {
+                return view('chainResponsability');
+            });
+            
             
             
             

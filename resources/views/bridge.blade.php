@@ -2,29 +2,42 @@
 @section('content')
 
 <?php 
+use App\Bridge\Clothes;
+use App\Bridge\LittleThings;
 
-use App\Bridge\Sending;
+use App\Bridge\Black;
+use App\Bridge\Red;
 
-use App\Bridge\ServiseGmailGateway;
-use App\Bridge\ServiseMailRuGateway;
-use App\Bridge\GmailServise;
-use App\Bridge\MailRuServise;
+use App\Bridge\Jacket;
+use App\Bridge\Short;
 
-$e = new GmailServise;
-$y = new ServiseGmailGateway($e);
+use App\Bridge\Snake;
+use App\Bridge\Clap;
 
-$k = new MailRuServise;
-$z = new ServiseMailRuGateway($k);
 
-$x = new Sending();
-$c = new Sending();
 
+
+$clothes = new Clothes(new Black,new Jacket);
+$littleThings = new LittleThings(new Snake, new Black);
+
+
+echo $clothes->color->colorIs();
+echo $clothes->type->typeIs();
+echo $littleThings->singleProduct->spIs();
+echo $littleThings->color->colorIs();
+
+
+
+$clothes = new Clothes(new Red,new Short);
+$littleThings = new LittleThings(new Clap, new Red);
+
+
+echo $clothes->color->colorIs();
+echo $clothes->type->typeIs();
+echo $littleThings->singleProduct->spIs();
+echo $littleThings->color->colorIs();
 ?>
 
-<ul>
-  <li> {{$x->sending() }} -  {{ $y->method() }} </li>
-  <li> {{$c->sending() }} -  {{ $z->method() }} </li>
-</ul>
 
 
 @endsection
